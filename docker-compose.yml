@@ -12,7 +12,12 @@ services:
 
   social_network:
     build: .
-    command: ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver"]
+    command:
+      [
+        "sh",
+        "-c",
+        "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000",
+      ]
     volumes:
       - .:/app
     ports:
@@ -26,6 +31,7 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=5432
+      - PYTHONDONTWRITEBYTECODE=1
 
 volumes:
   postgres_data:
