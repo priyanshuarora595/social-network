@@ -49,8 +49,6 @@ def login_view(request):
 
     user = authenticate(request, email=email, password=password)
     if user is not None:
-        user.last_login = timezone.now()
-        user.save()
         # Generate tokens using Simple JWT
         refresh = RefreshToken.for_user(user)
         return Response(
