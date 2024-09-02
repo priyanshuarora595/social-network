@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0164c676-fdae-4f1c-8ff6-aba229540f68",
+		"_postman_id": "b60c2995-25fb-47b6-a39c-ce2c9b37140d",
 		"name": "social network",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38048737"
+		"_exporter_id": "23425485"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"receiver_id\" : \"16327f46-aa4f-48ff-8628-9b3b9cf2f99e\"\n}",
+							"raw": "{\n    \"receiver_id\" : \"c1be6abc-3912-44cf-9839-14212e4ed2ad\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -179,7 +179,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"id\": 1,\n    \"sender\": {\n        \"id\": \"0bac9584-a6fe-4c24-9325-3b11a2d77de4\",\n        \"username\": \"test_user\",\n        \"email\": \"test_user@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    \"receiver\": {\n        \"id\": \"dcb6449f-b859-44f0-bb6b-02df3fb408bc\",\n        \"username\": \"test_user1\",\n        \"email\": \"test_user1@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    \"status\": \"pending\",\n    \"timestamp\": \"2024-09-01T15:04:50.165245Z\"\n}"
+							"body": "{\n    \"id\": \"ed59c349-8869-4897-9a6b-58aa174ed852\",\n    \"sender\": {\n        \"id\": \"9e841a41-6341-4849-8709-a1201ea532f9\",\n        \"username\": \"test_user2\",\n        \"email\": \"test_user2@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    \"receiver\": {\n        \"id\": \"c1be6abc-3912-44cf-9839-14212e4ed2ad\",\n        \"username\": \"test_user1\",\n        \"email\": \"test_user1@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\"\n    },\n    \"status\": \"pending\",\n    \"timestamp\": \"2024-09-02T05:40:28.717926Z\"\n}"
 						},
 						{
 							"name": "limit",
@@ -621,7 +621,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 3,\n        \"sender\": {\n            \"id\": \"0bac9584-a6fe-4c24-9325-3b11a2d77de4\",\n            \"username\": \"test_user\",\n            \"email\": \"test_user@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"receiver\": {\n            \"id\": \"a94318a2-8f41-4223-8444-b631ce5992d7\",\n            \"username\": \"test_user3\",\n            \"email\": \"test_user3@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"status\": \"pending\",\n        \"timestamp\": \"2024-09-01T15:05:43.888530Z\"\n    }\n]"
+							"body": "[\n    {\n        \"id\": \"ed59c349-8869-4897-9a6b-58aa174ed852\",\n        \"sender\": {\n            \"id\": \"0bac9584-a6fe-4c24-9325-3b11a2d77de4\",\n            \"username\": \"test_user\",\n            \"email\": \"test_user@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"receiver\": {\n            \"id\": \"a94318a2-8f41-4223-8444-b631ce5992d7\",\n            \"username\": \"test_user3\",\n            \"email\": \"test_user3@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        },\n        \"status\": \"pending\",\n        \"timestamp\": \"2024-09-01T15:05:43.888530Z\"\n    }\n]"
 						}
 					]
 				},
@@ -644,7 +644,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "3788f973-51ad-4766-8ee9-708189fe7614"
+									"value": "ed59c349-8869-4897-9a6b-58aa174ed852"
 								},
 								{
 									"key": "action",
@@ -999,7 +999,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"username\": \"test_user5\",\n  \"email\": \"test_user5@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
+					"raw": "{\n  \"username\": \"test_user2\",\n  \"email\": \"test_user2@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1090,6 +1090,79 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"id\": \"0bac9584-a6fe-4c24-9325-3b11a2d77de4\",\n    \"username\": \"test_user\",\n    \"email\": \"test_user@gmail.com\",\n    \"first_name\": \"\",\n    \"last_name\": \"\"\n}"
+				},
+				{
+					"name": "existing user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"test_user2\",\n  \"email\": \"test_user2@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}api/signup/",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 02 Sep 2024 05:52:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.19"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"A user with that username already exists.\"\n    ],\n    \"email\": [\n        \"user with this email already exists.\"\n    ]\n}"
 				}
 			]
 		},
@@ -1109,7 +1182,8 @@
 							"    pm.collectionVariables.set(\"refresh_token\",jsonData.refresh);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -1118,7 +1192,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"test_user5@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
+					"raw": "{\n  \"email\": \"test_user11@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1209,6 +1283,79 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNTI4Njc5NSwiaWF0IjoxNzI1MjAwMzk1LCJqdGkiOiIxZTYyZDVlY2RiYzU0MDE3OTU2MzQwODhkNDBhODA5NyIsInVzZXJfaWQiOiJkY2I2NDQ5Zi1iODU5LTQ0ZjAtYmI2Yi0wMmRmM2ZiNDA4YmMifQ.9tyA7p5L73hBE_kxbS2nAxE0BprCsaufKkyZhB8mlik\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI1MjAwNjk1LCJpYXQiOjE3MjUyMDAzOTUsImp0aSI6IjU3NWUwNDI0NTVhYzRkOWI5YmU1Mzk1YmQyM2RlZjcxIiwidXNlcl9pZCI6ImRjYjY0NDlmLWI4NTktNDRmMC1iYjZiLTAyZGYzZmI0MDhiYyJ9.3GgE50PYGIrFqyGV0U8JqrLyYPTF0MehRR6VAeUObeI\"\n}"
+				},
+				{
+					"name": "invalid creds",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"test_user11@gmail.com\",\n  \"password\": \"strong_password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}api/login/",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 02 Sep 2024 05:53:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.19"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Invalid credentials\"\n}"
 				}
 			]
 		},
@@ -1689,6 +1836,69 @@
 					],
 					"cookie": [],
 					"body": "[]"
+				},
+				{
+					"name": "friends",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}api/friends",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"friends"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 02 Sep 2024 05:40:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.19"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"friend\": {\n            \"id\": \"9e841a41-6341-4849-8709-a1201ea532f9\",\n            \"username\": \"test_user2\",\n            \"email\": \"test_user2@gmail.com\",\n            \"first_name\": \"\",\n            \"last_name\": \"\"\n        }\n    }\n]"
 				}
 			]
 		}
