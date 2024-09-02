@@ -6,14 +6,15 @@ This project is a social networking application built with Django and Django RES
 
 - [Social Networking Application](#social-networking-application)
   - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
   - [Running the Project](#running-the-project)
-
-## Installation
-
-To get started with this project, follow these steps:
+  - [API Endpoints](#api-endpoints)
+    - [User Login/Signup](#user-loginsignup)
+    - [Search Users](#search-users)
+    - [Friend Request Management](#friend-request-management)
+    - [Friendship Management](#friendship-management)
+  - [License](#license)
 
 ### Prerequisites
 
@@ -42,3 +43,145 @@ To get started with this project, follow these steps:
 ## Running the Project
 
 Once the containers are running, you can access the Django application at `http://127.0.0.1:8000`.
+
+
+## API Endpoints
+
+### User Login/Signup
+
+- **Login**
+  - **Endpoint:** '/api/login/'
+  - **Method:** 'POST'
+  - **Request Body:**
+
+   ```
+    {
+      'email': 'user@example.com',
+      'password': 'yourpassword'
+    }
+   ```
+  - **Response:**
+
+   ```
+    {
+      'refresh': 'your-refresh-token',
+      'access' : 'your-access-token',
+    }
+   ```
+- **Signup**
+  - **Endpoint:** '/api/signup/'
+  - **Method:** 'POST'
+  - **Request Body:**
+
+```
+    {
+      'username': 'username',
+      'email': 'user@example.com',
+      'password': 'yourpassword'
+    }
+```
+  - **Response:**
+
+```
+   {
+    "id": "uuid",
+    "username": "user",
+    "email": "user@example.com",
+    "first_name": "",
+    "last_name": ""
+   }
+```
+### Search Users
+
+- **Endpoint:** '/api/search/'
+- **Method:** 'GET'
+- **Query Parameters:**
+  - 'q' - The search keyword (email or part of the name).
+
+- **Response:**
+```
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": "uuid",
+            "username": "username",
+            "email": "user@example.com",
+            "first_name": "",
+            "last_name": ""
+        }
+    ]
+}
+```
+
+### Friend Request Management
+
+- **Send Friend Request**
+  - **Endpoint:** '/api/friend-request/'
+  - **Method:** 'POST'
+  - **Request Body:**
+```
+    {
+      'receiver_id': 'receiver-uuid'
+    }
+```
+  - **Response:**
+```
+{
+    "id": uuid,
+    "sender": {
+        "id": "sender-uuid",
+        "username": "sender-username",
+        "email": "sender-email@gmail.com",
+        "first_name": "",
+        "last_name": ""
+    },
+    "receiver": {
+        "id": "receiver-uuid",
+        "username": "receiver-username",
+        "email": "receiver-email@gmail.com",
+        "first_name": "",
+        "last_name": ""
+    },
+    "status": "pending",
+    "timestamp": "2024-09-01T15:04:50.165245Z"
+}
+```
+- **Handle Friend Request**
+  - **Endpoint:** '/api/friend-request/<pk>/<action>/'
+  - **Method:** 'POST'
+  - **URL Parameters:**
+    - 'pk' - The UUID of the friend request.
+    - 'action' - Either 'accept' or 'reject'.
+  - **Request Body:** (empty)
+  - **Response:**
+```
+    {
+      'status': 'accepted'  // or 'rejected'
+    }
+```
+### Friendship Management
+
+- **List Friends**
+  - **Endpoint:** '/api/friends/'
+  - **Method:** 'GET'
+  - **Response:**
+```
+[
+    {
+        "friend": {
+            "id": "friend-uuid",
+            "username": "friend-username",
+            "email": "friend-email@gmail.com",
+            "first_name": "",
+            "last_name": ""
+        }
+    }
+]
+```
+
+## License
+
+This project is licensed under the MIT License.
